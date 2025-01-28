@@ -1,0 +1,76 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d0c8e7; /* Light lavender background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Card Container */
+.card-container {
+  position: relative;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);;
+}
+
+/* Banner */
+.card-banner {
+  position: absolute;
+  top: 18px;
+  left: -15px;
+  background-color: #ffeb90; /* Pale yellow banner */
+  color: #000;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  border-radius: 6px 25px 25px 6px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Card Content */
+.card-content {
+  padding: 16px;
+  text-align: left;
+}
+
+.card-content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-content h1 span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #666;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: 16px;
+}

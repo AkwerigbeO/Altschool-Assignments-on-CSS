@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6f9; /* Light background */
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* HEADER*/
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  /* Left side: logo + brand name */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  /* LOGO as circle */
+  .logo {
+    width: auto;
+    height: auto;
+    max-width: auto;
+    max-height: auto;
+    object-fit: cover;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .header-right a {
+    color: #333;
+    font-size: 0.95rem;
+  }
+  .account-button {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .checkout-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    width: 100%;
+    overflow: hidden; /* hide border radius corners if child overflows */
+  }
+
+  /* Left (white card) */
+  .checkout-left {
+    flex: 2;
+    padding: 2rem;
+  }
+  .checkout-left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .info-section {
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .info-section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .info-section h3 span {
+    font-weight: normal;
+    color: #666;
+  }
+
+  /* Basic input styling for demonstration */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .buy-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    background-color: #198754; /* green-ish color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .buy-button:hover {
+    background-color: #166a42;
+  }
+
+  /* Right (blue panel) */
+  .checkout-right {
+    flex: 1;
+    background-color: #0b71c8;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .plan-price {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .plan-price small {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .plan-features {
+    margin-top: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  .plan-features li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .checkout-right a {
+    color: #ffeb90; 
+    text-decoration: underline;
+  }
+  .testimonial {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 1rem;
+  }
+  .testimonial img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .testimonial .author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+
+  footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    padding: 1rem;
+  }
+
+  /* RESPONSIVE (Mobile)*/
+  @media (max-width: 768px) {
+    .checkout-container {
+      flex-direction: column;
+    }
+    .checkout-right {
+      order: -1; 
+    }
+  }

@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #000;
+  background: #fff; /* White background at the top */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem; /* Adjusted vertical and horizontal spacing */
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  background: #fff;
+}
+
+.top-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
+}
+
+.top-section p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.highlight-green {
+  color: #009966;
+}
+
+.section-separator {
+  height: 1.5rem;
+  background: #7e7e7e;
+}
+
+.gray-section {
+  background: #4f4f4f;
+  padding: 2rem 1.5rem; /* Adjusted padding */
+}
+
+/* The white card inside the gray section */
+.white-card-wrapper {
+  background: #fff;
+  max-width: 1200px; /* Constrain width so it doesn’t stretch too wide */
+  margin: 0 auto;
+  padding: 2rem 1.5rem; /* Adjusted padding */
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* So we can position the yellow banner over its top edge */
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.yellow-banner {
+  display: inline-block; /* Keep it sized to content by default */
+  background: #ffc107; /* Vibrant yellow color */
+  color: #000;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  height: 40px; /* Match the height of the white card’s padding */
+  border-radius: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0.5rem; /* Shift from the top of the card’s content */
+  left: -0.1rem; /* Shift from the left side of the card’s content */
+}
+
+.white-card-content {
+  margin-top: 1.5rem; /* So text doesn’t collide with the banner */
+  font-size: 1rem;
+}
+
+/* Accessibility improvement: Adjust font size relative to root */
+body {
+  font-size: 16px; /* Default base size */
+}
+
+.top-section h1 {
+  font-size: 1.8rem;
+}
+
+.white-card-content {
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%; /* Slightly narrower margin on mobile */
+    padding: 1.5rem 1rem;
+  }
+  .container > * :not(:last-child) {
+    margin-bottom: 1rem; /* Add more space between sections */
+  }
+  .top-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .top-section p {
+    font-size: 1rem;
+  }
+
+  .white-card-wrapper {
+    padding: 0.8rem; /* Less padding on mobile to save space */
+  }
+
+  .yellow-banner {
+    font-size: 0.8rem;
+    left: 0.5rem 0.8rem; /* Adjusted position for smaller screens */
+  }
+
+  .white-card-content {
+    font-size: 0.95rem;
+  }
+}
+
+/* TABLET (from 601px up to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .top-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .white-card-wrapper {
+    padding: 1.5rem;
+    text-align: center; /* Center text on tablet */
+  }
+
+  .yellow-banner {
+    font-size: 1rem;
+  }
+
+  .white-card-content {
+    font-size: 1rem;
+  }
+}
+
+/* DESKTOP (over 1024px) */
+@media (min-width: 1025px) {
+  .top-section h1 {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 1400px) .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

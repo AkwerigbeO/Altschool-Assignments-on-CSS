@@ -1,0 +1,163 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: white; /* Pale background color */
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Container wraps the left info section + right form card */
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem;
+  background-color: #ffffff; /* matches body color for a seamless layout */
+}
+/* Left Side: Info / Logo / Heading */
+.left-section {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-section img.logo {
+  width: 100px;
+  margin-bottom: 1rem;
+  display: flex;
+  height: auto;
+  object-fit: cover;
+  align-self: flex-start;
+}
+.left-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000;
+  align-self: flex-start;
+}
+.left-section p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 400px;
+  align-self: flex-start;
+}
+/* Right Side: Form Card */
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.form-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+}
+/* Form elements */
+.form-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #000;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* 2-column row for first name/last name, weight/height, etc. */
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.row .form-group {
+  flex: 1;
+}
+/* Submit button */
+.form-card .register-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #2cc4ad;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+.register-btn:hover {
+  background-color: #26a491;
+}
+/* Terms text */
+.terms-text {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #555;
+}
+.terms-text a {
+  color: #2cc4ad;
+  text-decoration: none;
+  font-weight: 600;
+}
+.terms-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .container {
+    margin: 1rem;
+  }
+  .left-section,
+  .right-section {
+    padding: 1rem;
+  }
+}
+/* Responsive layout for smaller screens*/
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 1rem;
+  }
+  .left-section {
+    align-items: center; /* center text */
+    text-align: center;
+  }
+  .left-section p {
+    max-width: 100%;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
